@@ -32,6 +32,10 @@ the hexadecimal representation of the attribute ID, for example:
 FuelConsumption_0x108d
 ```
 
+You can use [`vitotrol`](https://github.com/maxatome/go-vitotrol) +
+`rget all`, `bget` or `remote_attrs` actions to discover attributes
+(german language skill needed :) ).
+
 Note that you can provide the special attribute
 `ComputedSetpointTemp`. This fake attribute is computed using several
 others and corresponds to the setpoint temperature (as it appears that
