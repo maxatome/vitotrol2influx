@@ -1,0 +1,43 @@
+---
+influx:
+  login: INFLUX_USER
+  password: INFLUX_PASSWORD
+  address: http://localhost:8086
+vitotrol:
+  login: VITOTROL_USER
+  password: VITOTROL_PASSWORD
+  retry_timeout: 30
+  frequency: 60
+devices:
+  - name: '*'
+    location: '*'
+    database: INFLUX_DB
+    precision: s
+    retention_policy: RETENTION_POLICY # optional
+    write_consistency: WRITE_CONSISTENCY # optional
+    measurement: MEASUREMENT
+    # "tags" is optional, if missing defaults to device:name + location:location
+    tags:
+      tagName1: tagValue1
+      tagName2: tagValue2
+    fields:
+      - IndoorTemp
+      - OutdoorTemp
+      - BoilerTemp
+      - HotWaterTemp
+      - HotWaterOutTemp
+      - HeatWaterOutTemp
+      - HeatNormalTemp
+      - PartyModeTemp
+      - HeatReducedTemp
+      - SmokeTemp
+      - ComputedSetpointTemp
+      - BurnerHoursRun
+      - BurnerStarts
+      - BurnerState
+      - InternalPumpStatus
+      - HeatingPumpStatus
+      - PartyMode
+      - EnergySavingMode
+      - OperatingModeCurrent
+      - Way3ValveStatus
